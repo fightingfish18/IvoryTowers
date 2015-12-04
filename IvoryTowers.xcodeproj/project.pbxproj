@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2C5758C51C1136C800CDF71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758C41C1136C800CDF71C /* AppDelegate.swift */; };
-		2C5758C71C1136C800CDF71C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758C61C1136C800CDF71C /* FirstViewController.swift */; };
-		2C5758C91C1136C800CDF71C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758C81C1136C800CDF71C /* SecondViewController.swift */; };
+		2C5758C71C1136C800CDF71C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758C61C1136C800CDF71C /* MapViewController.swift */; };
+		2C5758C91C1136C800CDF71C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758C81C1136C800CDF71C /* ListViewController.swift */; };
 		2C5758CC1C1136C800CDF71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5758CA1C1136C800CDF71C /* Main.storyboard */; };
 		2C5758CE1C1136C800CDF71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5758CD1C1136C800CDF71C /* Assets.xcassets */; };
 		2C5758D11C1136C800CDF71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5758CF1C1136C800CDF71C /* LaunchScreen.storyboard */; };
 		2C5758DC1C1136C800CDF71C /* IvoryTowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758DB1C1136C800CDF71C /* IvoryTowersTests.swift */; };
 		2C5758E71C1136C800CDF71C /* IvoryTowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */; };
+		2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 /* Begin PBXFileReference section */
 		2C5758C11C1136C700CDF71C /* IvoryTowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IvoryTowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5758C41C1136C800CDF71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C5758C61C1136C800CDF71C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2C5758C81C1136C800CDF71C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2C5758C61C1136C800CDF71C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2C5758C81C1136C800CDF71C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		2C5758CB1C1136C800CDF71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C5758CD1C1136C800CDF71C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C5758D01C1136C800CDF71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		2C5758E21C1136C800CDF71C /* IvoryTowersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IvoryTowersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvoryTowersUITests.swift; sourceTree = "<group>"; };
 		2C5758E81C1136C800CDF71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				2C5758C41C1136C800CDF71C /* AppDelegate.swift */,
-				2C5758C61C1136C800CDF71C /* FirstViewController.swift */,
-				2C5758C81C1136C800CDF71C /* SecondViewController.swift */,
+				2C5758C61C1136C800CDF71C /* MapViewController.swift */,
+				2C5758C81C1136C800CDF71C /* ListViewController.swift */,
 				2C5758CA1C1136C800CDF71C /* Main.storyboard */,
 				2C5758CD1C1136C800CDF71C /* Assets.xcassets */,
 				2C5758CF1C1136C800CDF71C /* LaunchScreen.storyboard */,
 				2C5758D21C1136C800CDF71C /* Info.plist */,
+				2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */,
 			);
 			path = IvoryTowers;
 			sourceTree = "<group>";
@@ -262,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5758C91C1136C800CDF71C /* SecondViewController.swift in Sources */,
+				2C5758C91C1136C800CDF71C /* ListViewController.swift in Sources */,
 				2C5758C51C1136C800CDF71C /* AppDelegate.swift in Sources */,
-				2C5758C71C1136C800CDF71C /* FirstViewController.swift in Sources */,
+				2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */,
+				2C5758C71C1136C800CDF71C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +495,7 @@
 				2C5758ED1C1136C800CDF71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C5758EE1C1136C800CDF71C /* Build configuration list for PBXNativeTarget "IvoryTowersTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				2C5758F01C1136C800CDF71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C5758F11C1136C800CDF71C /* Build configuration list for PBXNativeTarget "IvoryTowersUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +513,7 @@
 				2C5758F31C1136C800CDF71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
