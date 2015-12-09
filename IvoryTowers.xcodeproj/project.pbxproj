@@ -16,6 +16,7 @@
 		2C5758DC1C1136C800CDF71C /* IvoryTowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758DB1C1136C800CDF71C /* IvoryTowersTests.swift */; };
 		2C5758E71C1136C800CDF71C /* IvoryTowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */; };
 		2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */; };
+		B2E7AABB1C17B62500CDE472 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvoryTowersUITests.swift; sourceTree = "<group>"; };
 		2C5758E81C1136C800CDF71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2C5758CF1C1136C800CDF71C /* LaunchScreen.storyboard */,
 				2C5758D21C1136C800CDF71C /* Info.plist */,
 				2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */,
+				B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */,
 			);
 			path = IvoryTowers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				2C5758C91C1136C800CDF71C /* ListViewController.swift in Sources */,
 				2C5758C51C1136C800CDF71C /* AppDelegate.swift in Sources */,
 				2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */,
+				B2E7AABB1C17B62500CDE472 /* SignInViewController.swift in Sources */,
 				2C5758C71C1136C800CDF71C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
