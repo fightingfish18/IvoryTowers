@@ -16,13 +16,14 @@
 		2C5758DC1C1136C800CDF71C /* IvoryTowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758DB1C1136C800CDF71C /* IvoryTowersTests.swift */; };
 		2C5758E71C1136C800CDF71C /* IvoryTowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */; };
 		2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */; };
-		B2E7AABB1C17B62500CDE472 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */; };
 		9DBB44961C17AA6B0041ABF1 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB44951C17AA6B0041ABF1 /* LocationTableViewController.swift */; };
 		9DBB44981C17AA860041ABF1 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */; };
 		9DBB449C1C17AADE0041ABF1 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB449B1C17AADE0041ABF1 /* Review.swift */; };
 		9DBB44A01C17AB0F0041ABF1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB449F1C17AB0F0041ABF1 /* Location.swift */; };
 		9DBB44A21C17AB180041ABF1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB44A11C17AB180041ABF1 /* User.swift */; };
 		9DBB44A61C17AF2C0041ABF1 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB44A51C17AF2C0041ABF1 /* RatingControl.swift */; };
+		B2E7AABB1C17B62500CDE472 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */; };
+		B2E7AABF1C17D83600CDE472 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AABE1C17D83600CDE472 /* LocationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +59,14 @@
 		2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvoryTowersUITests.swift; sourceTree = "<group>"; };
 		2C5758E81C1136C800CDF71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9DBB44951C17AA6B0041ABF1 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		9DBB449B1C17AADE0041ABF1 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		9DBB449F1C17AB0F0041ABF1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9DBB44A11C17AB180041ABF1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9DBB44A51C17AF2C0041ABF1 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B2E7AABE1C17D83600CDE472 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				B2E7AABA1C17B62500CDE472 /* SignInViewController.swift */,
 				9DBB44951C17AA6B0041ABF1 /* LocationTableViewController.swift */,
 				9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */,
+				B2E7AABE1C17D83600CDE472 /* LocationDetailViewController.swift */,
 			);
 			path = IvoryTowers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				2C5758C91C1136C800CDF71C /* ListViewController.swift in Sources */,
 				9DBB44A01C17AB0F0041ABF1 /* Location.swift in Sources */,
 				9DBB449C1C17AADE0041ABF1 /* Review.swift in Sources */,
+				B2E7AABF1C17D83600CDE472 /* LocationDetailViewController.swift in Sources */,
 				2C5758C51C1136C800CDF71C /* AppDelegate.swift in Sources */,
 				9DBB44A21C17AB180041ABF1 /* User.swift in Sources */,
 				2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */,
