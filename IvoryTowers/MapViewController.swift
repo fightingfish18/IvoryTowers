@@ -7,17 +7,22 @@
 //
 
 import UIKit
+// import GoogleMaps
+import MapKit
 
 class MapViewController: UIViewController {
+    // var query : String?
 
+    @IBOutlet weak var seachBar: UISearchBar!
+    @IBOutlet weak var map: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // ***Google Maps setup***
+        // let camera = GMSCameraPosition.cameraWithLatitude(*Latitude as float*, longitude:*Longitude as float*, zoom:*Int*)
+        // let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        // self.view = mapView
     }
 
 

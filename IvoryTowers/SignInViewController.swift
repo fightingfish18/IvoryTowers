@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  SignInViewController.swift
 //  IvoryTowers
 //
 //  Created by Alison Rose Haugh on 12/8/15.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class SignInViewController: UIViewController {
 
 }
