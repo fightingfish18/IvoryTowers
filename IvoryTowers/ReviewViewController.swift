@@ -10,26 +10,54 @@ import UIKit
 
 class ReviewViewController: UIViewController {
 
+    @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
+    var review: Review?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let review = review {
+            navBar.title = review.title
+            nameTextField.text = review.title
+            descriptionTextField.text = review.body
+            ratingControl.rating = review.rating
+        }
+        
+        checkValidReviewName()
+    }
+    
+    
+    func checkValidReviewName() {
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        //NEED TO ADD CANCEL
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if saveButton === sender {
+            let title = nameTextField.text ?? ""
+            let rating = ratingControl.rating
+            let body = descriptionTextField.text ?? ""
+            let author = "" //NEED TO GET
+            let location = "" //NEED TO GET
+            
+            review = Review(author: author, location: location, title: title, body: body, rating: rating)
+        }
     }
-    */
 
 }

@@ -15,6 +15,7 @@
 		2C5758DC1C1136C800CDF71C /* IvoryTowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758DB1C1136C800CDF71C /* IvoryTowersTests.swift */; };
 		2C5758E71C1136C800CDF71C /* IvoryTowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */; };
 		2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */; };
+		9D1841801C1A3F5A0072E779 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18417F1C1A3F5A0072E779 /* ReviewViewController.swift */; };
 		9DBB44981C17AA860041ABF1 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */; };
 		9DBB449C1C17AADE0041ABF1 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB449B1C17AADE0041ABF1 /* Review.swift */; };
 		9DBB44A01C17AB0F0041ABF1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB449F1C17AB0F0041ABF1 /* Location.swift */; };
@@ -57,6 +58,7 @@
 		2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvoryTowersUITests.swift; sourceTree = "<group>"; };
 		2C5758E81C1136C800CDF71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D18417F1C1A3F5A0072E779 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		9DBB449B1C17AADE0041ABF1 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		9DBB449F1C17AB0F0041ABF1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				9DBB44971C17AA860041ABF1 /* LocationTableViewCell.swift */,
 				B2E7AABE1C17D83600CDE472 /* LocationDetailViewController.swift */,
 				B2E7AAC01C17E73500CDE472 /* ListViewController.swift */,
+				9D18417F1C1A3F5A0072E779 /* ReviewViewController.swift */,
 			);
 			path = IvoryTowers;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				9DBB44981C17AA860041ABF1 /* LocationTableViewCell.swift in Sources */,
 				9DBB44A01C17AB0F0041ABF1 /* Location.swift in Sources */,
+				9D1841801C1A3F5A0072E779 /* ReviewViewController.swift in Sources */,
 				B2E7AAC11C17E73500CDE472 /* ListViewController.swift in Sources */,
 				9DBB449C1C17AADE0041ABF1 /* Review.swift in Sources */,
 				B2E7AABF1C17D83600CDE472 /* LocationDetailViewController.swift in Sources */,
