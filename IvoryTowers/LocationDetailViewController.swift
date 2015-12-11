@@ -10,4 +10,8 @@ import UIKit
 
 class LocationDetailViewController: UIViewController {
 
+    @IBOutlet weak var locationTitle: UILabel!
+    @IBOutlet weak var locationDescription: UILabel!
+
+    @IBOutlet weak var reviews: UITableView!
 }
