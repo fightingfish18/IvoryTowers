@@ -10,4 +10,13 @@ import UIKit
 
 class LocationDetailViewController: UIViewController {
 
+    @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var loactionAvgRating: UILabel!
+    @IBOutlet weak var locationDesc: UILabel!
+    @IBOutlet weak var locationReviews: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
