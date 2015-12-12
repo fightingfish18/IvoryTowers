@@ -155,7 +155,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="PXa-tj-1wV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="PXa-tj-1wV" customClass="LocationTableViewCell" customModule="IvoryTowers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PXa-tj-1wV" id="D8V-Oe-958">
@@ -183,6 +183,10 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Rs-NVz" customClass="RatingControl" customModule="IvoryTowers" customModuleProvider="target">
+                                                    <rect key="frame" x="304" y="14" width="240" height="44"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -195,6 +199,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="dateCreated" destination="HO1-jb-S7p" id="i5r-jP-tQ1"/>
+                                            <outlet property="ratingControl" destination="RIx-Rs-NVz" id="N6H-7f-b6l"/>
+                                            <outlet property="ratingTitle" destination="fc9-uP-nse" id="GhA-pb-gnj"/>
+                                            <outlet property="review" destination="wyx-EZ-rZw" id="GQz-SC-GE8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

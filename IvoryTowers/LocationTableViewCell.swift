@@ -10,6 +10,11 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ratingTitle: UILabel!
+    @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var review: UILabel!
+    @IBOutlet weak var dateCreated: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

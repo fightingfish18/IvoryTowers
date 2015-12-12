@@ -1,0 +1,5 @@
+XSym
+0066
+4fd26034d691ec296b698dcfb4433fb4
+../../../Parse/Parse/Internal/Query/Controller/PFQueryController.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

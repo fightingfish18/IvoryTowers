@@ -1,0 +1,5 @@
+XSym
+0076
+1b274bc0c0a0e564c9dfacaa7a88d449
+../../../Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseResult.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

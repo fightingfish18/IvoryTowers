@@ -1,0 +1,5 @@
+XSym
+0078
+61032a13131646db5faabc18bf58fc31
+../../../Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabase_Private.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

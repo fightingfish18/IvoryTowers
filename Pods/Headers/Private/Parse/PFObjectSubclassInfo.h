@@ -1,0 +1,5 @@
+XSym
+0071
+524f5287ee13739559e505c885734682
+../../../Parse/Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

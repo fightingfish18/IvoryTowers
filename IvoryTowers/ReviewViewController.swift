@@ -17,7 +17,7 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
     
-    var review: Review?
+    var review: Review? //Main review
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class ReviewViewController: UIViewController {
     
     //If cancel button clicked
     @IBAction func cancel(sender: UIBarButtonItem) {
-        //NEED CANCEL
+        //TODO?: POSSIBLY EXTEND CANCEL FUNCTIONALITY
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -56,8 +56,8 @@ class ReviewViewController: UIViewController {
             let title = nameTextField.text ?? ""
             let rating = ratingControl.rating
             let body = descriptionTextField.text ?? ""
-            let author = "" //NEED TO GET FROM PARSE
-            let location = "" //NEED TO GET FROM SOMEWHERE
+            let author = "" //TODO: GET AUTHOR FROM PARSE
+            let location = "" //TODO: GET CURRENT USER LOCATION
             
             //New review object
             review = Review(author: author, location: location, title: title, body: body, rating: rating)

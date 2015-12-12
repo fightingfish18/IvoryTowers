@@ -1,0 +1,5 @@
+XSym
+0084
+a4e0e9394cc90134b88f03b2cedcc766
+../../../Parse/Parse/Internal/LocalDataStore/OfflineQueryLogic/PFOfflineQueryLogic.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
