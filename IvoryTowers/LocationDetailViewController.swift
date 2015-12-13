@@ -16,7 +16,10 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var locationDesc: UILabel!
     @IBOutlet weak var locationReviews: UITableView!
     
+    var objectId = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.objectId)
     }
 }
