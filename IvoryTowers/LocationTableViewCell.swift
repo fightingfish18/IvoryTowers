@@ -10,9 +10,12 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateCreated: UILabel!
+    @IBOutlet weak var reviewTitle: UILabel!
+    @IBOutlet weak var reviewText: UILabel!
     override func awakeFromNib() {
+        
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
