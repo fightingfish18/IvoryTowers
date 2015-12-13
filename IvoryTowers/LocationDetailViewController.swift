@@ -43,7 +43,28 @@ class LocationDetailViewController: UIViewController {
             
             //Else update review
             
+            /*
+            Sample Code:
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing review
+                
+                //Parse
+                
+                reviews[selectedIndexPath.row] = review
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            } else {
+                // Add a new review
+                
+                //Parse
+                
+                let newIndexPath = NSIndexPath(forRow: reviews.count, inSection: 0)
+                reviews.append(review)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+            */
+            
+                   
         }
     }
-
 }
