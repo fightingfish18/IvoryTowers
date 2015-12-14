@@ -7,7 +7,7 @@
 //
 
 import UIKit
-// import GoogleMaps
+import GoogleMaps
 import MapKit
 
 class MapViewController: UIViewController {
@@ -20,9 +20,9 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // ***Google Maps setup***
-        // let camera = GMSCameraPosition.cameraWithLatitude(*Latitude as float*, longitude:*Longitude as float*, zoom:*Int*)
-        // let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
-        // self.view = mapView
+        let camera = GMSCameraPosition.cameraWithLatitude(47.653, longitude:-122.306, zoom:15)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        self.view = mapView
     }
 
 
