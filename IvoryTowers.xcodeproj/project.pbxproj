@@ -15,6 +15,8 @@
 		2C5758DC1C1136C800CDF71C /* IvoryTowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758DB1C1136C800CDF71C /* IvoryTowersTests.swift */; };
 		2C5758E71C1136C800CDF71C /* IvoryTowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */; };
 		2CB7280C1C113D8700E8E0D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */; };
+		498B53F11C1EB92800588077 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498B53EF1C1EB92800588077 /* FBSDKCoreKit.framework */; };
+		498B53F21C1EB92800588077 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498B53F01C1EB92800588077 /* FBSDKLoginKit.framework */; };
 		91A207766624C9923DF404B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164F7A3DDE26479391FECBAC /* libPods.a */; };
 		9D1841801C1A3F5A0072E779 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18417F1C1A3F5A0072E779 /* ReviewViewController.swift */; };
 		9DBB449C1C17AADE0041ABF1 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB449B1C17AADE0041ABF1 /* Review.swift */; };
@@ -60,6 +62,8 @@
 		2C5758E61C1136C800CDF71C /* IvoryTowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvoryTowersUITests.swift; sourceTree = "<group>"; };
 		2C5758E81C1136C800CDF71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CB7280B1C113D8700E8E0D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		498B53EF1C1EB92800588077 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		498B53F01C1EB92800588077 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		84A4AA701C1A6C330053CE71 /* IvoryTowers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IvoryTowers-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D18417F1C1A3F5A0072E779 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		9D2EB33C927641A332B61008 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A207766624C9923DF404B5 /* libPods.a in Frameworks */,
+				498B53F11C1EB92800588077 /* FBSDKCoreKit.framework in Frameworks */,
+				498B53F21C1EB92800588077 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +173,8 @@
 		4AFD42ADB8F34E3DE1D693C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				498B53EF1C1EB92800588077 /* FBSDKCoreKit.framework */,
+				498B53F01C1EB92800588077 /* FBSDKLoginKit.framework */,
 				164F7A3DDE26479391FECBAC /* libPods.a */,
 			);
 			name = Frameworks;
@@ -552,6 +560,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IvoryTowers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.washington.www.IvoryTowers;
@@ -568,6 +580,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IvoryTowers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.washington.www.IvoryTowers;
