@@ -3,3 +3,4 @@
 //
 
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
