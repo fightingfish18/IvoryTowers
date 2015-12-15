@@ -8,7 +8,6 @@
 
 import UIKit
 import FBSDKCoreKit
-import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
