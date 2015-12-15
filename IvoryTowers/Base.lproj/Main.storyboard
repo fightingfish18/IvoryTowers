@@ -372,6 +372,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga2-As-uWQ">
                                 <rect key="frame" x="276" y="251" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="logIn:" destination="ip5-D1-bJp" eventType="touchUpInside" id="tZL-F5-wYQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgc-6w-zqh">
                                 <rect key="frame" x="258" y="213" width="166" height="30"/>
@@ -379,7 +382,7 @@
                                     <constraint firstAttribute="width" constant="166" id="YdD-W8-CVg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-wu-MJO">
                                 <rect key="frame" x="176" y="217" width="74" height="21"/>
@@ -393,7 +396,7 @@
                                     <constraint firstAttribute="width" constant="166" id="Cch-6Y-EOT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VR-po-1my">
                                 <rect key="frame" x="171" y="179" width="79" height="21"/>
@@ -419,7 +422,7 @@
                                     <constraint firstAttribute="width" constant="166" id="nyu-d8-L1L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLX-jc-DqT">
                                 <rect key="frame" x="258" y="356" width="166" height="30"/>
@@ -427,7 +430,7 @@
                                     <constraint firstAttribute="width" constant="166" id="GQI-zG-OVo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-Jw-ngu">
                                 <rect key="frame" x="176" y="360" width="74" height="21"/>
@@ -441,11 +444,14 @@
                                     <constraint firstAttribute="width" constant="166" id="vsY-EV-vLi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjy-yB-UEn">
                                 <rect key="frame" x="276" y="432" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="signUp:" destination="ip5-D1-bJp" eventType="touchUpInside" id="Ymu-2x-Lta"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2S-el-eng">
                                 <rect key="frame" x="110" y="398" width="140" height="21"/>
@@ -489,6 +495,9 @@
                     <connections>
                         <outlet property="loginName" destination="atW-TF-NJA" id="exB-fE-PD1"/>
                         <outlet property="loginPassword" destination="Cgc-6w-zqh" id="sxB-5t-TV3"/>
+                        <outlet property="signupConfirm" destination="a2C-pz-ZJK" id="tag-cW-Rw2"/>
+                        <outlet property="signupName" destination="o28-g5-FRW" id="WDz-4E-rH9"/>
+                        <outlet property="signupPass" destination="NLX-jc-DqT" id="Yhw-e4-jtJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnz-Yj-TWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
