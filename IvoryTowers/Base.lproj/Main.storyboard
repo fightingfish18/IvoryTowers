@@ -132,7 +132,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Review" id="sHn-oW-AUV">
                                             <connections>
-                                                <segue destination="OAX-Dq-wH0" kind="presentation" id="jZt-b3-ceb"/>
+                                                <segue destination="OAX-Dq-wH0" kind="presentation" identifier="createReview" id="jZt-b3-ceb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -289,7 +289,11 @@
                                                 <segue destination="ml5-xH-MVN" kind="unwind" unwindAction="unwindSegue:" id="lmR-Uq-MXz"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Qa4-zY-aqf"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Qa4-zY-aqf">
+                                            <connections>
+                                                <segue destination="Kmp-QM-wiX" kind="showDetail" identifier="reviewSave" id="Fy5-Le-JYH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -374,7 +378,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnK-kq-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ml5-xH-MVN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1674" y="386"/>
+            <point key="canvasLocation" x="1678" y="426"/>
         </scene>
         <!--Profile-->
         <scene sceneID="e7q-zD-i9n">
@@ -655,6 +659,6 @@
         <image name="Profile" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3ne-TS-xOe"/>
+        <segue reference="Fy5-Le-JYH"/>
     </inferredMetricsTieBreakers>
 </document>

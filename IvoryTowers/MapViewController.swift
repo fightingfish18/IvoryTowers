@@ -59,6 +59,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             for location in locations {
                 if location["name"] as! String == self.selectedText {
                     controller.objectId = location.valueForKey("objectId") as! String;
+                    controller.location = location;
                 }
             }
         }
