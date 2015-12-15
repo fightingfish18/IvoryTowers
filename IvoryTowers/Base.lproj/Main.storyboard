@@ -635,10 +635,6 @@
         <image name="Profile" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="Fy5-Le-JYH"/>
-=======
-        <segue reference="7Lp-sc-ZaY"/>
->>>>>>> origin/master
     </inferredMetricsTieBreakers>
 </document>
