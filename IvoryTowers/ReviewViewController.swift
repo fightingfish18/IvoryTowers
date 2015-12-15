@@ -18,6 +18,7 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     let ratings : [String] = ["1", "2", "3", "4", "5"];
     var review: Review?
     var location: String = ""
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,18 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         checkValidReviewName()
         self.ratingPicker.dataSource = self;
         self.ratingPicker.delegate = self;
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.ratings.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ratings[row];
     }
     
     
@@ -51,6 +64,7 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             let body = descriptionTextField.text ?? ""
             let author = PFUser.currentUser()?.objectId!
             let location = self.location
+            let rating = 3
             
             review = Review(author: author!, location: location, title: title, body: body, rating: rating)
             // TODO: Post the review object to parse
