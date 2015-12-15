@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -132,32 +133,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-sG-fo5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-sG-fo5">
                                 <rect key="frame" x="20" y="107" width="201" height="128"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dAH-sG-fo5" secondAttribute="height" multiplier="201:128" id="4UN-ir-7Pm"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFR-G4-NS7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFR-G4-NS7">
                                 <rect key="frame" x="229" y="171" width="49" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spb-Oy-82R">
-                                <rect key="frame" x="20" y="269" width="156" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location description" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spb-Oy-82R">
+                                <rect key="frame" x="20" y="269" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwx-04-dlg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwx-04-dlg">
                                 <rect key="frame" x="229" y="129" width="115" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.1450980392" green="0.0" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTy-up-lpY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="9" allowsSelection="NO" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTy-up-lpY">
                                 <rect key="frame" x="20" y="333" width="560" height="267"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,21 +214,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No reviews for this location yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-AI-WBs">
+                                <rect key="frame" x="20" y="304" width="240" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.84705882349999995" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dAH-sG-fo5" firstAttribute="top" secondItem="iIV-JO-YNC" secondAttribute="bottom" constant="35" id="7Pq-Vt-0jo"/>
+                            <constraint firstItem="pfZ-fv-QGf" firstAttribute="top" secondItem="yTy-up-lpY" secondAttribute="bottom" constant="-49" id="7ku-2S-8BF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Spb-Oy-82R" secondAttribute="trailing" id="BqB-Bg-NAU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hjT-AI-WBs" secondAttribute="leading" id="Bsa-92-Hr6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dAH-sG-fo5" secondAttribute="leading" id="KTW-Pm-BDb"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Spb-Oy-82R" secondAttribute="leading" id="P8H-Pd-sEf"/>
                             <constraint firstItem="iIV-JO-YNC" firstAttribute="top" secondItem="wsH-4j-rYD" secondAttribute="bottom" constant="8" id="QtW-Qy-Zmj"/>
                             <constraint firstItem="iIV-JO-YNC" firstAttribute="centerX" secondItem="Atv-gk-yRd" secondAttribute="centerX" id="Rte-6L-4RR"/>
                             <constraint firstItem="VFR-G4-NS7" firstAttribute="top" secondItem="Qwx-04-dlg" secondAttribute="bottom" constant="21" id="SZe-uT-Oex"/>
+                            <constraint firstItem="dAH-sG-fo5" firstAttribute="width" secondItem="Atv-gk-yRd" secondAttribute="height" multiplier="67:200" id="Vw4-7b-TXH"/>
                             <constraint firstItem="Qwx-04-dlg" firstAttribute="leading" secondItem="dAH-sG-fo5" secondAttribute="trailing" constant="8" id="Ys6-kV-7nb"/>
                             <constraint firstItem="iIV-JO-YNC" firstAttribute="width" secondItem="Atv-gk-yRd" secondAttribute="width" id="cGU-Wd-ZiK"/>
+                            <constraint firstItem="yTy-up-lpY" firstAttribute="top" secondItem="Spb-Oy-82R" secondAttribute="bottom" constant="43" id="iFz-Yp-lyP"/>
                             <constraint firstItem="VFR-G4-NS7" firstAttribute="leading" secondItem="dAH-sG-fo5" secondAttribute="trailing" constant="8" id="mvE-8T-X19"/>
                             <constraint firstItem="Spb-Oy-82R" firstAttribute="top" secondItem="dAH-sG-fo5" secondAttribute="bottom" constant="34" id="sfx-MY-80E"/>
                             <constraint firstItem="Qwx-04-dlg" firstAttribute="top" secondItem="iIV-JO-YNC" secondAttribute="bottom" constant="57" id="tEc-mK-vOU"/>
+                            <constraint firstItem="hjT-AI-WBs" firstAttribute="top" secondItem="Spb-Oy-82R" secondAttribute="bottom" constant="14" id="v4b-pK-1jZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -233,6 +250,7 @@
                         <outlet property="locationImage" destination="dAH-sG-fo5" id="h3r-rj-T77"/>
                         <outlet property="locationName" destination="Qwx-04-dlg" id="etf-Ih-ehL"/>
                         <outlet property="locationReviews" destination="yTy-up-lpY" id="nav-vB-snb"/>
+                        <outlet property="noReviews" destination="hjT-AI-WBs" id="vk5-Mv-Usp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unw-yX-BGA" userLabel="First Responder" sceneMemberID="firstResponder"/>

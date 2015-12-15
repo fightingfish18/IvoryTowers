@@ -16,18 +16,45 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var locationDesc: UILabel!
     @IBOutlet weak var locationReviews: UITableView!
     let cellIdentifier = "reviewCell";
-    let mockDataTitles : [String] = ["Review 1", "Review 2", "Review 3", "Review 4", "Review 5", "Review 6"];
-    let mockDataText : [String] = ["Text1", "Text 2", "Text3", "text4", "text5", "Text6"];
-    
+    @IBOutlet weak var noReviews: UILabel!
+    var reviews : [PFObject] = [];
     var objectId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(self.objectId)
-        locationReviews.dataSource = self
+        let query = PFQuery(className:"Location")
+        query.getObjectInBackgroundWithId(self.objectId) {
+            (location: PFObject?, error: NSError?) -> Void in
+            if error == nil && location != nil {
+                self.locationName.text = location!["name"] as? String;
+                self.locationDesc.text = location!["description"] as? String;
+                if let url = NSURL(string: (location!["imageUrl"] as? String)!) {
+                    if let data = NSData(contentsOfURL: url) {
+                        self.locationImage.image = UIImage(data: data)
+                    }
+                }
+                let reviewQuery = PFQuery(className:"Review")
+                reviewQuery.whereKey("Location", equalTo:(location!["name"] as? String)!)
+                reviewQuery.findObjectsInBackgroundWithBlock {
+                    (reviews: [PFObject]?, error: NSError?) -> Void in
+                    if error == nil {
+                        if reviews!.count == 0 {
+                            self.locationReviews.hidden = true;
+                        } else {
+                            self.noReviews.hidden = true;
+                            self.reviews = reviews!;
+                        }
+                    } else {
+                        print(error)
+                    }
+                }
+            } else {
+                print(error)
+            }
+        }
+        locationReviews.dataSource = self;
         locationReviews.delegate = self;
-        locationName.text = "Test Location";
-        locationDesc.text = "This is not a real location.";
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,14 +63,16 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(locationReviews: UITableView, numberOfRowsInSection: Int) -> Int {
-        return self.mockDataText.count;
+        return self.reviews.count;
     }
     
     func tableView(locationReviews: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:LocationTableViewCell = locationReviews.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath : indexPath) as! LocationTableViewCell;
-        cell.reviewTitle?.text = mockDataTitles[indexPath.row];
-        cell.reviewText?.text = mockDataText[indexPath.row];
-        cell.dateCreated?.text = "Today";
+        
+        let review = reviews[indexPath.row];
+        cell.reviewTitle?.text = review["title"] as? String;
+        cell.reviewText?.text = review["body"] as? String;
+        cell.dateCreated?.text = review["createdAt"] as? String;
         
         return cell;
     }
