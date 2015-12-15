@@ -70,12 +70,12 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "reviewSave" {
-            let title = nameTextField.text //?? ""
-            let body = descriptionTextField.text //?? ""
+            let title = nameTextField.text
+            let body = descriptionTextField.text
             let author = PFUser.currentUser()!
             let location = self.locationObject
             let rating = Int(self.selectedRating);
-            var review = PFObject(className: "Review");
+            let review = PFObject(className: "Review");
             review["title"] = title;
             review["body"] = body;
             review["author"] = author;

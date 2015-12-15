@@ -203,23 +203,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIV-JO-YNC">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Location Details" id="MXf-lb-fgY">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="lbT-Oo-fhQ">
-                                            <connections>
-                                                <segue destination="0qX-2z-nEx" kind="unwind" unwindAction="unwindSegue:" id="FwN-go-DZf"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Review" id="sHn-oW-AUV">
-                                            <connections>
-                                                <segue destination="OAX-Dq-wH0" kind="presentation" id="jZt-b3-ceb"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.84705882349999995" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -633,10 +616,7 @@
         <image name="Profile" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="Fy5-Le-JYH"/>
-=======
         <segue reference="7Lp-sc-ZaY"/>
->>>>>>> origin/master
     </inferredMetricsTieBreakers>
 </document>
