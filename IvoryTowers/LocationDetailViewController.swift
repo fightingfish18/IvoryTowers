@@ -35,7 +35,7 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
                     }
                 }
                 let reviewQuery = PFQuery(className:"Review")
-                reviewQuery.whereKey("Location", equalTo:(location!["name"] as? String)!)
+                reviewQuery.whereKey("location", equalTo:(location)!)
                 reviewQuery.findObjectsInBackgroundWithBlock {
                     (reviews: [PFObject]?, error: NSError?) -> Void in
                     if error == nil {
@@ -44,6 +44,7 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
                         } else {
                             self.noReviews.hidden = true;
                             self.reviews = reviews!;
+                            self.locationReviews.reloadData();
                         }
                     } else {
                         print(error)

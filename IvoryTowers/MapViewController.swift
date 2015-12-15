@@ -13,6 +13,7 @@ import MapKit
 class MapViewController: UIViewController, GMSMapViewDelegate {
     // var query : String?
     var locations : [PFObject] = [];
+    var selectedText : String = "";
 
     @IBOutlet weak var seachBar: UISearchBar!
     @IBOutlet weak var map: MKMapView!
@@ -31,6 +32,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
             if error == nil {
                 if let objects = objects {
+                    self.locations = objects;
                     for object in objects {
                         let coordinates = object["coordinates"];
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude));
@@ -47,7 +49,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
+        self.selectedText = marker.title;
         performSegueWithIdentifier("buildingLocationDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "buildingLocationDetail" {
+            let controller = (segue.destinationViewController as! LocationDetailViewController)
+            for location in locations {
+                if location["name"] as! String == self.selectedText {
+                    controller.objectId = location.valueForKey("objectId") as! String;
+                }
+            }
+        }
     }
 
 
