@@ -12,12 +12,12 @@ class ReviewViewController: UIViewController {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var ratingControl: RatingControl!
     
     var review: Review?
+    var location: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +37,6 @@ class ReviewViewController: UIViewController {
         let text = nameTextField.text ?? ""
         saveButton.enabled = !text.isEmpty
     }
-    
-    @IBAction func cancel(sender: UIBarButtonItem) {
-        //NEED TO ADD CANCEL
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,10 +49,11 @@ class ReviewViewController: UIViewController {
             let title = nameTextField.text ?? ""
             let rating = ratingControl.rating
             let body = descriptionTextField.text ?? ""
-            let author = "" //NEED TO GET
-            let location = "" //NEED TO GET
+            let author = PFUser.currentUser()?.objectId!
+            let location = self.location
             
-            review = Review(author: author, location: location, title: title, body: body, rating: rating)
+            review = Review(author: author!, location: location, title: title, body: body, rating: rating)
+            // TODO: Post the review object to parse
         }
     }
 
