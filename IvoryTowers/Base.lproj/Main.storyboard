@@ -498,6 +498,7 @@
                         <outlet property="signupConfirm" destination="a2C-pz-ZJK" id="tag-cW-Rw2"/>
                         <outlet property="signupName" destination="o28-g5-FRW" id="WDz-4E-rH9"/>
                         <outlet property="signupPass" destination="NLX-jc-DqT" id="Yhw-e4-jtJ"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="SuccessLoginSegue" id="NHS-l0-Dci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnz-Yj-TWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
