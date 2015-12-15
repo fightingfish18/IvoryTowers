@@ -23,7 +23,9 @@ class ListViewController: UITableViewController, UISearchResultsUpdating {
                 // Do something with the found objects
                 if let locations = locations {
                     for location in locations {
-                        self.locations.append(location["name"] as! String)
+                        let name = location["name"] as! String
+                        let abbr = location["abbreviation"] as! String
+                        self.locations.append("\(name) \(abbr=="none" ? "" : "(\(abbr))")")
                         self.objectIds.append(location.objectId!)
                     }
                     self.tableView.reloadData()
