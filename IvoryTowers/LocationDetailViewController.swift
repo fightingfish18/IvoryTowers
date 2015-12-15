@@ -47,4 +47,15 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
         
         return cell;
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "createReview" {
+            let controller = (segue.destinationViewController as! ReviewViewController)
+                controller.location = self.objectId
+        }
+    }
+    
+    @IBAction func cancel(sender: UIStoryboardSegue) {
+        return
+    }
 }
