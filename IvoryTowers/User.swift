@@ -11,12 +11,11 @@ import UIKit
 
 class User {
     
-    var facebookID:String
+    var id: String
     
-    init?(facebookID:String) {
-        self.facebookID = facebookID
-        
-        if facebookID.isEmpty {
+    init?(id: String) {
+        self.id = id
+        if id.isEmpty {
             return nil
         }
     }
