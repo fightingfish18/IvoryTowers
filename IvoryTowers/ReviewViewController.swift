@@ -17,7 +17,9 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var ratingPicker: UIPickerView!
     let ratings : [String] = ["1", "2", "3", "4", "5"];
     var review: Review?
-    var location: String = ""
+    var location: String = "";
+    var locationObject : PFObject?;
+    var selectedRating : String = "";
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             descriptionTextField.text = review.body
         }
         
-        checkValidReviewName()
+        //checkValidReviewName()
         self.ratingPicker.dataSource = self;
         self.ratingPicker.delegate = self;
     }
@@ -46,6 +48,11 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return ratings[row];
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        self.selectedRating = ratings[row];
+    }
+    
     
     func checkValidReviewName() {
         let text = nameTextField.text ?? ""
@@ -57,18 +64,27 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
     }
     
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if saveButton === sender {
-            let title = nameTextField.text ?? ""
-            let body = descriptionTextField.text ?? ""
-            let author = PFUser.currentUser()?.objectId!
-            let location = self.location
-            let rating = 3
-            
-            review = Review(author: author!, location: location, title: title, body: body, rating: rating)
-            // TODO: Post the review object to parse
-        }
+    @IBAction func save(sender: AnyObject?) {
+        performSegueWithIdentifier("reviewSave", sender: sender)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "reviewSave" {
+            let title = nameTextField.text //?? ""
+            let body = descriptionTextField.text //?? ""
+            let author = PFUser.currentUser()!
+            let location = self.locationObject
+            let rating = Int(self.selectedRating);
+            var review = PFObject(className: "Review");
+            review["title"] = title;
+            review["body"] = body;
+            review["author"] = author;
+            review["location"] = location;
+            review["rating"] = rating;
+            review.saveInBackground()
+            let controller = (segue.destinationViewController as! LocationDetailViewController)
+            controller.location = self.locationObject;
+            controller.objectId = self.locationObject!.valueForKey("objectId") as! String
+        }
+    }
 }

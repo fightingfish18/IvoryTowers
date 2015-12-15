@@ -19,13 +19,15 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var noReviews: UILabel!
     var reviews : [PFObject] = [];
     var objectId = ""
+    var location : PFObject?;
+    var ratings : [Int] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.objectId)
         let query = PFQuery(className:"Location")
         query.getObjectInBackgroundWithId(self.objectId) {
             (location: PFObject?, error: NSError?) -> Void in
+            self.location = location;
             if error == nil && location != nil {
                 self.locationName.text = location!["name"] as? String;
                 self.locationDesc.text = location!["description"] as? String;
@@ -45,6 +47,15 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
                             self.noReviews.hidden = true;
                             self.reviews = reviews!;
                             self.locationReviews.reloadData();
+                            for review in reviews! {
+                                self.ratings.append(review["rating"] as! Int)
+                            }
+                            var sum = 0;
+                            for rating in self.ratings {
+                                sum += rating;
+                            }
+                            let average = sum / self.ratings.count
+                            self.loactionAvgRating.text = ("Rating - \(average)");
                         }
                     } else {
                         print(error)
@@ -82,6 +93,7 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
         if segue.identifier == "createReview" {
             let controller = (segue.destinationViewController as! ReviewViewController)
                 controller.location = self.objectId
+                controller.locationObject = self.location;
         }
     }
     
