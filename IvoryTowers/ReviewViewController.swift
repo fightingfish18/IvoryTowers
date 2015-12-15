@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ReviewViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -29,7 +29,7 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         
         checkValidReviewName()
-        self.ratingPicker.dataSource = self;
+        //self.ratingPicker.dataSource = self;
         self.ratingPicker.delegate = self;
     }
     
@@ -52,7 +52,7 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             let author = PFUser.currentUser()?.objectId!
             let location = self.location
             
-            review = Review(author: author!, location: location, title: title, body: body, rating: rating)
+            //review = Review(author: author!, location: location, title: title, body: body, rating: rating)
             // TODO: Post the review object to parse
         }
     }
