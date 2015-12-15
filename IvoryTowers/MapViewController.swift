@@ -35,7 +35,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                         let coordinates = object["coordinates"];
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude));
                         marker.title = object["name"]! as! String;
-                        //marker.description = object["description"]! as! String;
+                        marker.snippet = object["description"]! as! String;
                         marker.map = mapView;
                     }
                 }
@@ -47,7 +47,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
-        print("marker touched");
+        performSegueWithIdentifier("buildingLocationDetail", sender: self)
     }
 
 

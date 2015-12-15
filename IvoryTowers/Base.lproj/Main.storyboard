@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ip5-D1-bJp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -41,9 +41,10 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="N78-RL-BJv" secondAttribute="bottom" constant="8" id="wI1-f1-UMz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="seachBar" destination="xkK-du-Aph" id="fkn-Ov-9Nc"/>
+                        <segue destination="Kmp-QM-wiX" kind="showDetail" identifier="buildingLocationDetail" id="3ne-TS-xOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -88,7 +89,7 @@
                             <outlet property="delegate" destination="HVT-FP-756" id="Fyu-0s-pPN"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" id="9jY-JN-N5K"/>
+                    <tabBarItem key="tabBarItem" title="List" image="List" id="9jY-JN-N5K"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="HDo-Ut-AVy" id="A0q-qj-apb"/>
                     </connections>
@@ -377,7 +378,7 @@
                             <constraint firstItem="qlJ-hz-q6p" firstAttribute="leading" secondItem="Uzu-C4-Jgi" secondAttribute="trailing" constant="8" id="z1q-dS-mi9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="18a-Z1-BID"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="18a-Z1-BID"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOE-Ew-p5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,6 +407,9 @@
                                 <rect key="frame" x="276" y="251" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="logIn:" destination="ip5-D1-bJp" eventType="touchUpInside" id="tZL-F5-wYQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgc-6w-zqh">
                                 <rect key="frame" x="258" y="213" width="166" height="30"/>
@@ -414,7 +418,7 @@
                                     <constraint firstAttribute="width" constant="166" id="YdD-W8-CVg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-wu-MJO">
                                 <rect key="frame" x="176" y="217" width="74" height="21"/>
@@ -430,7 +434,7 @@
                                     <constraint firstAttribute="width" constant="166" id="Cch-6Y-EOT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VR-po-1my">
                                 <rect key="frame" x="171" y="179" width="79" height="21"/>
@@ -460,7 +464,7 @@
                                     <constraint firstAttribute="width" constant="166" id="nyu-d8-L1L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLX-jc-DqT">
                                 <rect key="frame" x="258" y="356" width="166" height="30"/>
@@ -469,7 +473,7 @@
                                     <constraint firstAttribute="width" constant="166" id="GQI-zG-OVo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-Jw-ngu">
                                 <rect key="frame" x="176" y="360" width="74" height="21"/>
@@ -485,12 +489,15 @@
                                     <constraint firstAttribute="width" constant="166" id="vsY-EV-vLi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjy-yB-UEn">
                                 <rect key="frame" x="276" y="432" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="signUp:" destination="ip5-D1-bJp" eventType="touchUpInside" id="Ymu-2x-Lta"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2S-el-eng">
                                 <rect key="frame" x="110" y="398" width="140" height="21"/>
@@ -536,6 +543,10 @@
                     <connections>
                         <outlet property="loginName" destination="atW-TF-NJA" id="exB-fE-PD1"/>
                         <outlet property="loginPassword" destination="Cgc-6w-zqh" id="sxB-5t-TV3"/>
+                        <outlet property="signupConfirm" destination="a2C-pz-ZJK" id="tag-cW-Rw2"/>
+                        <outlet property="signupName" destination="o28-g5-FRW" id="WDz-4E-rH9"/>
+                        <outlet property="signupPass" destination="NLX-jc-DqT" id="Yhw-e4-jtJ"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="SuccessLoginSegue" id="NHS-l0-Dci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnz-Yj-TWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,4 +575,12 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="List" width="33" height="33"/>
+        <image name="Map" width="33" height="33"/>
+        <image name="Profile" width="33" height="33"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3ne-TS-xOe"/>
+    </inferredMetricsTieBreakers>
 </document>
