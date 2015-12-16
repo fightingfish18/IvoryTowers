@@ -401,6 +401,41 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.84705882349999995" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewCell" id="AIk-1k-Jy5" customClass="ReviewCell" customModule="IvoryTowers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIk-1k-Jy5" id="34x-Cr-qiB">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2y-hf-7CD">
+                                                    <rect key="frame" x="510" y="0.0" width="42" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xv-JS-8Vx">
+                                                    <rect key="frame" x="8" y="14" width="494" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="494" id="NiI-yU-qVl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="k2y-hf-7CD" secondAttribute="trailing" id="OPY-IM-oeg"/>
+                                                <constraint firstItem="k2y-hf-7CD" firstAttribute="centerY" secondItem="34x-Cr-qiB" secondAttribute="centerY" id="QrC-6Y-qnz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4xv-JS-8Vx" secondAttribute="bottom" constant="-7.5" id="tA4-pf-HDp"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="4xv-JS-8Vx" secondAttribute="leading" id="vLD-II-8s7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="body" destination="4xv-JS-8Vx" id="Jw9-F1-gD1"/>
+                                            <outlet property="score" destination="k2y-hf-7CD" id="2P9-TP-pWn"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

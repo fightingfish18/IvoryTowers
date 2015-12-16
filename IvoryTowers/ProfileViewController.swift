@@ -10,11 +10,14 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var username: UILabel!
+
     var reviews : [PFObject]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         username.text = PFUser.currentUser()?.username
+        print(reviews)
+        print("abbacadabra")
         // Do any additional setup after loading the view.
     }
 
@@ -28,8 +31,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("questionCell") as! QuestionCell
-        cell.questionTitle.text = self.questions[current].answers[indexPath.row]
+        let review = reviews![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("reviewCell") as! ReviewCell
+        cell.body.text = String(review["body"])
+        cell.score.text = String(review["score"])
         return cell
     }
     
