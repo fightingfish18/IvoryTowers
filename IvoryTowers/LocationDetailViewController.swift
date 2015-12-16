@@ -82,7 +82,10 @@ class LocationDetailViewController: UIViewController, UITableViewDelegate, UITab
         let cell:LocationTableViewCell = locationReviews.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath : indexPath) as! LocationTableViewCell;
         
         let review = reviews[indexPath.row];
-        cell.reviewTitle?.text = review["title"] as? String;
+        var title = review["title"] as? String
+        let rating = review["rating"] as? Int
+        title = "\(title!) - \(rating!)"
+        cell.reviewTitle?.text = title;
         cell.reviewText?.text = review["body"] as? String;
         cell.dateCreated?.text = review["createdAt"] as? String;
         
