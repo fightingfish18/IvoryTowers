@@ -8,23 +8,47 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginName: UITextField!
     @IBOutlet weak var loginPassword: UITextField!
     @IBOutlet weak var signupName: UITextField!
     @IBOutlet weak var signupPass: UITextField!
     @IBOutlet weak var signupConfirm: UITextField!
+    var moved : Bool = false;
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loginName.delegate = self;
+        loginPassword.delegate = self;
+        signupName.delegate = self;
+        signupPass.delegate = self;
+        signupConfirm.delegate = self;
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        if (self.moved) {
+            self.view.frame.origin.y += 100;
+            self.moved = false;
+        }
+        return false
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if (textField == signupName || textField == signupPass || textField == signupConfirm) && !self.moved {
+            self.view.frame.origin.y -= 100;
+            self.moved = true;
+        } else if self.moved && (textField == loginName || textField == loginPassword) {
+            self.view.frame.origin.y += 100;
+            self.moved = false
+        }
     }
     
     @IBAction func logIn(sender: AnyObject) {
