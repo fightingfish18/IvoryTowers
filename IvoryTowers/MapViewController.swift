@@ -63,8 +63,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 }
             }
         }
+        if segue.identifier == "MapToProfile" {
+            var reviews : [PFObject] = []
+            let query = PFQuery(className:"Review")
+            query.whereKey("author", equalTo:(PFUser.currentUser()?.objectId)!)
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    reviews = objects!
+                } else {
+                    // Log details of the failure
+                    print("Error: \(error!) \(error!.userInfo)")
+                }
+            }
+            let controller = segue.destinationViewController as! ProfileViewController
+            controller.reviews = reviews
+        }
     }
-
-
 }
 
