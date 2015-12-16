@@ -13,6 +13,7 @@ class ListViewController: UITableViewController, UISearchResultsUpdating {
     var locations = [String]()
     var filteredLocations = [String]()
     var resultSearchController = UISearchController()
+    var locationObjects : [PFObject] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class ListViewController: UITableViewController, UISearchResultsUpdating {
             if error == nil {
                 // Do something with the found objects
                 if let locations = locations {
+                    self.locationObjects = locations;
                     for location in locations {
                         let name = location["name"] as! String
                         let abbr = location["abbreviation"] as! String
@@ -88,6 +90,7 @@ class ListViewController: UITableViewController, UISearchResultsUpdating {
                 let id = self.objectIds[indexPath.row]
                 let controller = (segue.destinationViewController as! LocationDetailViewController)
                 controller.objectId = id
+                controller.location = self.locationObjects[indexPath.row]
             }
         }
     }
