@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -31,9 +31,25 @@ class ReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             descriptionTextField.text = review.body
         }
         
+        nameTextField.delegate = self;
+        descriptionTextField.delegate = self;
         //checkValidReviewName()
         self.ratingPicker.dataSource = self;
         self.ratingPicker.delegate = self;
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.endEditing(true);
+        return false;
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        print(text);
+        if (text == "\n") {
+            textView.resignFirstResponder();
+            return false;
+        }
+        return true;
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
