@@ -10,14 +10,28 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var reviewsTable: UITableView!
 
     var reviews : [PFObject]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         username.text = PFUser.currentUser()?.username
-        print(reviews)
-        print("abbacadabra")
+        let query = PFQuery(className:"Review")
+        query.whereKey("author", equalTo:(PFUser.currentUser())!)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                self.reviews = objects!
+                print(self.reviews)
+                self.reviewsTable.reloadData()
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+
         // Do any additional setup after loading the view.
     }
 

@@ -77,7 +77,6 @@
                     <tabBarItem key="tabBarItem" title="List" image="List" id="9jY-JN-N5K"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="HDo-Ut-AVy" id="A0q-qj-apb"/>
-                        <segue destination="PlI-GW-oQX" kind="show" identifier="MapToProfile" id="34J-Aw-F78"/>
                     </connections>
                 </tableViewController>
                 <searchDisplayController id="HDo-Ut-AVy">
@@ -453,6 +452,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="18a-Z1-BID"/>
                     <connections>
+                        <outlet property="reviewsTable" destination="gxC-BS-VrK" id="frf-CV-wQc"/>
                         <outlet property="username" destination="qlJ-hz-q6p" id="GvW-6M-eBj"/>
                     </connections>
                 </viewController>
@@ -641,7 +641,6 @@
         <image name="Profile" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S6w-fk-heC"/>
         <segue reference="3ne-TS-xOe"/>
     </inferredMetricsTieBreakers>
 </document>
